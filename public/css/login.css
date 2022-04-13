@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+body {
+    height: 100%;
+    background-image: url(../images/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.itw-logo {
+    cursor: pointer;
+    margin: 20px 0 0 50px;
+}
+
+.login-title {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.login-title h2,
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-container {
+    width: 35%;
+    float: right;
+    margin-top: 5%;
+    margin-right: 70px;
+    padding-bottom: 20px;
+    background-color: rgba(245, 245, 245, 0.548);
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+form input {
+    font-size: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+#email {
+    width: 100%;
+}
+
+form dl {
+    margin-top: 25px;
+}
+
+form dt {
+    margin-top: 10px;
+}
+
+.form-list {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+button {
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    border: 1px solid rgb(0, 204, 255);
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+#password {
+    width: 100%;
+}
+
+.dd-pass {
+    position: relative;
+}
+
+i {
+    position: absolute;
+    color: black;
+    transform: translateX(-130%);
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.4);
+}
+
+.sign-up {
+    margin-left: 10%;
+}
+
+.re-password {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    display: block;
+}
+
+.error {
+    margin-top: 30px;
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}

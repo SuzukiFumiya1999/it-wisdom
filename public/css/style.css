@@ -1,0 +1,855 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: left;
+    list-style-type: none;
+    border-collapse: collapse;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #0d6efd;
+}
+
+header {
+    padding: 30px 0;
+}
+
+.main-tab {
+    width: 100%;
+    position: fixed;
+    top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5em;
+}
+
+.main-tab .new-post a {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: .3em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    border: 1px solid rgb(0, 204, 255);
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+.main-tab .new-post {
+    margin-top: 5px;
+}
+
+.main-tab div {
+    width: 15%;
+    text-align: center;
+}
+
+.user-detail {
+    display: flex;
+    align-items: center;
+}
+
+.user_image img {
+    max-width: 4em;
+    min-width: 4em;
+    max-height: 4em;
+    min-height: 4em;
+    border-radius: 50%;
+}
+
+.main-tab .user-detail a {
+    border-radius: 50%;
+}
+
+.user-detail a:not(:first-child) {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.posts-img {
+    width: 5em;
+    padding-left: 10px;
+}
+
+.posts tr td .userImage {
+    max-width: 7em;
+    min-width: 7em;
+    max-height: 7em;
+    min-height: 7em;
+    padding-top: 10px;
+    border-radius: 50%;
+}
+
+.posts {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.posts table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.posts-name {
+    width: 15%;
+    border-right: 1px solid grey;
+    text-align: center;
+}
+
+.posts-title {
+    padding-left: 20px;
+    font-size: 30px;
+    word-wrap: break-word;
+}
+
+.posts-title a {
+    display: block;
+    width: 100%;
+    padding: 25px 0;
+    word-wrap: break-word;
+}
+
+.posts-created {
+    font-size: 10px;
+    width: 9%;
+    text-align: right;
+}
+
+.posts tr {
+    display: block;
+    border: 1px solid grey;
+    margin-bottom: 50px;
+}
+
+.paging {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 25px;
+}
+
+.paging a {
+    padding: 0 10px;
+}
+
+/* newPost.php */
+.itw-logo {
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    cursor: pointer;
+    padding-bottom: 100px;
+}
+
+.newPost dt {
+    margin-bottom: 10px;
+}
+
+.new-post_main {
+    padding: 100px 0 50px 0;
+}
+
+.newPost dl {
+    width: 70%;
+    font-size: 25px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.new-post_main label {
+    border: 2px dashed blue;
+    padding: 5px 20px;
+}
+
+.count {
+    font-size: 20px;
+}
+
+#preview {
+    max-width: 100%;
+}
+
+.newPost {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid grey;
+    border-radius: 50px;
+    padding: 50px 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.required {
+    color: red;
+}
+
+.upimg-label #image {
+    margin-top: 15px;
+}
+
+.newPost textarea {
+    width: 100%;
+    resize: none;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.error {
+    font-size: 15px;
+    color: red;
+}
+
+.btnSubmit {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnSubmit button {
+    display: block;
+    width: 45%;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    border: 1px solid rgb(0, 204, 255);
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+.btnSubmit button:hover {
+    box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* request.php */
+.request-container {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    padding-bottom: 40px;
+}
+
+.request-container .top-flex {
+    display: flex;
+    border: 1px solid grey;
+    margin-bottom: 30px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.q-user_detail {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    border-right: 1px solid grey;
+}
+
+.q-user_detail img {
+    max-width: 7em;
+    min-width: 7em;
+    max-height: 7em;
+    min-height: 7em;
+    border-radius: 50%;
+}
+
+.q-user_detail a:first-child {
+    padding: 10px 10px;
+}
+
+.q-user_detail a:not(:first-child) {
+    display: block;
+    width: 100%;
+}
+
+.q-user_detail a p {
+    width: 100%;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.q-title {
+    padding-left: 30px;
+    width: 100%;
+    font-size: 30px;
+}
+
+.q-image {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.q-image img {
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.q-content {
+    font-size: 30px;
+    margin-bottom: 5px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+.q-content pre {
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.reply-content {
+    padding-right: 20px;
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+.reply-content pre {
+    width: 100%;
+    font-size: 30px;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.bot-flex {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.good button {
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    top: 3px;
+}
+
+.fa-solid {
+    color: red;
+}
+
+.answer-title {
+    margin-bottom: 30px;
+}
+
+.answer-title h1 {
+    text-align: center;
+}
+
+.request-container form {
+    margin-bottom: 50px;
+}
+
+.request-container form label {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#a-image {
+    margin: 30px 0;
+}
+
+#a-preview {
+    margin-bottom: 30px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.request-container form textarea {
+    width: 100%;
+    resize: none;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.count {
+    font-size: 17px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.request-container form button {
+    display: block;
+    width: 45%;
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    border: 1px solid rgb(0, 204, 255);
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+/* request_comp.php */
+.logo {
+    cursor: pointer;
+    margin: 20px 0 0 50px;
+}
+
+.logo img {
+    width: 8%;
+}
+
+.comp-container {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 1px solid grey;
+    border-radius: 50px;
+}
+
+.comp-title h2 {
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+}
+
+.comp-content p {
+    font-size: 25px;
+    margin-top: 20%;
+    text-align: center;
+}
+
+.btn {
+    margin-top: 15%;
+    text-align: center;
+    padding: 50px;
+}
+
+.btn button {
+    width: 60%;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+    letter-spacing: .3em;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 50px;
+    color: white;
+}
+
+.btn button:hover {
+    box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* post_edit.php */
+.edit-post_form {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    padding-bottom: 30px;
+}
+
+.edit-top_flex {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.edit-user_detail {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.edit-user_detail img {
+    max-width: 7em;
+    min-width: 7em;
+    max-height: 7em;
+    min-height: 7em;
+    border-radius: 50%;
+}
+
+.edit-userName {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.edit-userName p {
+    font-size: 20px;
+}
+
+.edit-q_title {
+    width: 100%;
+}
+
+.edit-q_title input {
+    font-size: 30px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.edit-post_image {
+    margin: 50px 0;
+}
+
+.edit-post_image img {
+    display: block;
+    min-width: 50%;
+    margin: 0 auto;
+}
+
+.edit-content {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#e-content {
+    width: 100%;
+    font-size: 30px;
+    border: 1px solid gray;
+    resize: none;
+    padding: 20px 10px;
+}
+
+.edit_tab {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0 50px 0;
+}
+
+.edit_tab button,
+.edit_tab a {
+    width: 20%;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+    letter-spacing: .3em;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 50px;
+    color: white;
+}
+
+.edit_tab button:hover,
+.edit_tab a:hover {
+    box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* post_delete.php */
+.delete-container {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 1px solid grey;
+    border-radius: 50px;
+}
+
+.delete-content p {
+    font-size: 25px;
+    margin-top: 20%;
+    text-align: center;
+}
+
+.delete-btn {
+    width: 100%;
+    margin-top: 15%;
+    text-align: center;
+    padding: 50px;
+}
+
+.delete-btn form {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.delete-btn button,
+.delete-btn a {
+    display: block;
+    width: 40%;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+    letter-spacing: .3em;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 50px;
+    color: white;
+}
+
+.delete-btn button:hover,
+.delete-btn a:hover {
+    box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* reply_edit.php */
+.reply-edit_main {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+}
+
+.replies_edit {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.reply-title h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.reply-user_info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.reply-user_info p {
+    width: 100%;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.reply-user_info img {
+    max-width: 7em;
+    min-width: 7em;
+    max-height: 7em;
+    min-height: 7em;
+    max-width: 40%;
+    border-radius: 50%;
+}
+
+.reply-image {
+    margin-bottom: 50px;
+}
+
+.reply-image img {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.reply-content {
+    border-bottom: 1px solid gray;
+    margin-bottom: 50px;
+}
+
+.replies {
+    margin-bottom: 300px;
+}
+
+.replies .edit {
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+.replies .edit p {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.edit-reply_content {
+    margin-bottom: 50px;
+}
+
+#edit-reply_content {
+    width: 100%;
+    font-size: 25px;
+    border: 1px solid gray;
+    resize: none;
+    padding: 20px 10px;
+}
+
+.edit-reply_tab {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.edit-reply_tab button,
+.edit-reply_tab a {
+    width: 20%;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+    letter-spacing: .3em;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 50px;
+    color: white;
+}
+
+.edit-reply_tab button:hover,
+.edit-reply_tab a:hover {
+    box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* user_detail.php */
+.user_detail-tab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 20px;
+    position: fixed;
+}
+
+.user_detail-logo {
+    padding-left: 100px;
+}
+
+.user_detail-right_tab {
+    padding-right: 50px;
+}
+
+.user_detail-right_tab a {
+    padding-right: 50px;
+}
+
+/* user_edit.php */
+.user_detail-form {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.user_edit-image {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.user_edit-image input {
+    display: none;
+}
+
+#edit-user_image_preview {
+    max-width: 10em;
+    min-width: 10em;
+    max-height: 10em;
+    min-height: 10em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user_edit-name label,
+.user_edit-email label {
+    display: inline-block;
+    width: 15em;
+    font-size: 20px;
+}
+
+.user_detail-form input:not(:first-child) {
+    width: 60%;
+    font-size: 20px;
+    padding: 10px 10px;
+}
+
+.user_edit-name {
+    margin-bottom: 50px;
+}
+
+.user_edit-email {
+    margin-bottom: 100px;
+}
+
+.user_edit-btn {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.user_edit-btn button,
+.user_edit-btn a {
+    width: 30%;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+    letter-spacing: .3em;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    border: 1px solid rgb(0, 204, 255);
+    border-radius: 50px;
+    color: white;
+}
+
+.user_edit-btn button:hover,
+.user_edit-btn a:hover {
+    box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* good_list.php */
+.good_list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
