@@ -81,6 +81,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="index.php"><img src="../images/logo.png" alt=""></a>
     </div>
 
+    <div class="admin-logout">
+        <?php if ($_SESSION['id'] === 0) : ?>
+            <a href="./Login/login.php">ログアウト</a>
+        <?php endif; ?>
+    </div>
+
     <main class="user_detail-form">
         <form action="" method="post" enctype="multipart/form-data">
             <?php if ($user == true) : ?>
