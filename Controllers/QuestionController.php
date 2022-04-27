@@ -272,4 +272,21 @@ class QuestionController
         ];
         return $params;
     }
+
+    //質問検索
+    public function search_question()
+    {
+        $page = 0;
+        if (isset($this->request['get']['page'])) {
+            $page = $this->request['get']['page'];
+        }
+        $search_question = $this->Questions->search_question($page);
+        $search_count = $this->Questions->search_countAll();
+
+        $params = [
+            'questions' => $search_question,
+            'pages' => $search_count / 10
+        ];
+        return $params;
+    }
 }
