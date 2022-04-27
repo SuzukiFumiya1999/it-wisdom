@@ -139,4 +139,24 @@ class Questions extends Db
         $count = $sth->fetchColumn();
         return $count;
     }
+
+    //検索機能
+    public function search_question($page)
+    {
+        $sql = 'SELECT users.id as "ユーザーID", users.name, users.image, questions.id, questions.title, questions.user_id, questions.created_at
+                FROM questions LEFT JOIN users ON questions.user_id = users.id WHERE questions.del_flg = 0 AND questions.title LIKE "%' . $_GET['search'] . '%" ORDER BY created_at DESC LIMIT 10 OFFSET ' . (10 * $page);
+        $sth = $this->dbh->prepare($sql);
+        $sth->execute();
+        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function search_countAll(): Int
+    {
+        $sql = 'SELECT count(*) as count FROM ' . $this->table . ' WHERE del_flg = 0 AND questions.title LIKE "%' . $_GET['search'] . '%"';
+        $sth = $this->dbh->prepare($sql);
+        $sth->execute();
+        $count = $sth->fetchColumn();
+        return $count;
+    }
 }
