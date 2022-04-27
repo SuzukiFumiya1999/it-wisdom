@@ -164,11 +164,11 @@ class QuestionController
                     header('Location: ../index.php');
                     $_SESSION['id'] = 0;
                 } else {
-                    $error['failed'] = '入力が正しくありません。';
+                    $error['failed'] = 'パスワードが正しくありません。';
                     return $error;
                 }
             } else {
-                $error['failed'] = 'aaa';
+                $error['failed'] = '入力が正しくありません。';
                 return $error;
             }
         } else {
