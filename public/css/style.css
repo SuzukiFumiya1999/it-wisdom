@@ -125,6 +125,31 @@ header {
     margin-top: 100px;
 }
 
+.index-posts {
+    width: 80%;
+    margin-top: 100px;
+}
+
+.index-posts tr {
+    display: block;
+    border: 1px solid grey;
+    margin-bottom: 50px;
+}
+
+.index-posts tr td .userImage {
+    max-width: 7em;
+    min-width: 7em;
+    max-height: 7em;
+    min-height: 7em;
+    padding-top: 10px;
+    border-radius: 50%;
+}
+
+.index-posts table {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .posts table {
     width: 80%;
     margin: 0 auto;
@@ -152,7 +177,6 @@ header {
 .posts-created {
     font-size: 10px;
     width: 9%;
-    text-align: right;
 }
 
 .posts tr {
@@ -169,6 +193,66 @@ header {
 
 .paging a {
     padding: 0 10px;
+}
+
+.search {
+    margin-top: 100px;
+    margin-right: 80px;
+}
+
+.search input {
+    width: 70%;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.search button {
+    font-size: 17px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: .3em;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    border: 1px solid rgb(0, 204, 255);
+}
+
+.index-main {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* search.php */
+
+.search_question {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.search_question form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.search_question input {
+    width: 70%;
+    padding: 5px 10px;
+    font-size: 17px;
+}
+
+.search_question button {
+    font-size: 17px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: .3em;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    border: 1px solid rgb(0, 204, 255);
 }
 
 /* newPost.php */
