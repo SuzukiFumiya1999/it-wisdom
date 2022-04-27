@@ -56,31 +56,43 @@ $params = $questions->index();
             </div>
         </div>
     </header>
-    <div class="posts">
-        <table>
-            <?php foreach ($params['questions'] as $questions) : ?>
-                <tr>
-                    <td class="posts-img"><a class="posts-img" href="user_detail.php?id=<?= $questions['ユーザーID'] ?>"><img class="userImage" src="../user_images/<?= $questions['image'] ?>" alt=""></a></td>
-                    <td class="posts-name"><a href="user_detail.php?id=<?= $questions['ユーザーID'] ?>"><?= e($questions['name']) ?></a></td>
-                    <td class="posts-title"><a href="request.php?id=<?= $questions['id'] ?>">
-                            <pre><?= e($questions['title']) ?></pre>
-                        </a></td>
-                    <td class="posts-created"><?= e($questions['created_at']) ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
-        <div class="paging">
-            <?php
-            for ($i = 0; $i <= $params['pages']; $i++) {
-                if (isset($_GET['page']) && $_GET['page'] == $i) {
-                    echo $i + 1;
-                } else {
-                    echo "<a href='?page=" . $i . "'>" . ($i + 1) . "</a>";
+    <main class="index-main">
+        <div class="index-posts">
+            <table>
+                <?php foreach ($params['questions'] as $questions) : ?>
+                    <tr>
+                        <td class="posts-img"><a class="posts-img" href="user_detail.php?id=<?= $questions['ユーザーID'] ?>"><img class="userImage" src="../user_images/<?= $questions['image'] ?>" alt=""></a></td>
+                        <td class="posts-name"><a href="user_detail.php?id=<?= $questions['ユーザーID'] ?>"><?= e($questions['name']) ?></a></td>
+                        <td class="posts-title"><a href="request.php?id=<?= $questions['id'] ?>">
+                                <pre><?= e($questions['title']) ?></pre>
+                            </a></td>
+                        <td class="posts-created"><?= e($questions['created_at']) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+
+            <div class="paging">
+                <?php
+                if (empty($_POST)) {
+                    for ($i = 0; $i <= $params['pages']; $i++) {
+                        if (isset($_GET['page']) && $_GET['page'] == $i) {
+                            echo $i + 1;
+                        } else {
+                            echo "<a href='?page=" . $i . "'>" . ($i + 1) . "</a>";
+                        }
+                    }
                 }
-            }
-            ?>
+                ?>
+            </div>
         </div>
-    </div>
+
+        <div class="search">
+            <form action="./search.php" method="get">
+                <input type="text" name="search" placeholder="キーワードを入力">
+                <button type="submit">検索</button>
+            </form>
+        </div>
+    </main>
 </body>
 
 </html>
