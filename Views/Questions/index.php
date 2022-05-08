@@ -73,7 +73,8 @@ $params = $questions->index();
 
             <div class="paging">
                 <?php
-                if (empty($_POST)) {
+                if ($params['pages'] === 0) {
+                } else {
                     for ($i = 0; $i <= $params['pages']; $i++) {
                         if (isset($_GET['page']) && $_GET['page'] == $i) {
                             echo $i + 1;
