@@ -56,11 +56,17 @@ function e($s)
 
     <div class="paging">
         <?php
-        for ($i = 0; $i <= $users_data['pages']; $i++) {
-            if (isset($_GET['page']) && $_GET['page'] == $i) {
-                echo $i + 1;
-            } else {
-                echo "<a href='?id=" . $_GET['id'] . "&page=" . $i . "'>" . ($i + 1) . "</a>";
+        if ($users_data['pages'] === 0) { ?>
+            <div class="not-question">
+                <h1>投稿がありません</h1>
+            </div>
+        <?php } else {
+            for ($i = 0; $i <= $users_data['pages']; $i++) {
+                if (isset($_GET['page']) && $_GET['page'] == $i) {
+                    echo $i + 1;
+                } else {
+                    echo "<a href='?id=" . $_GET['id'] . "&page=" . $i . "'>" . ($i + 1) . "</a>";
+                }
             }
         }
         ?>
