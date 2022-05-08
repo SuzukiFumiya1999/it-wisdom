@@ -53,8 +53,11 @@ $search = $questions->search_question();
         </table>
 
         <div class="paging">
-            <?php
-            if (empty($_POST)) {
+            <?php if ($search['pages'] === 0) { ?>
+                <div class="not-question">
+                    <h1>投稿は見つかりませんでした。</h1>
+                </div>
+            <?php } else {
                 for ($i = 0; $i <= $search['pages']; $i++) {
                     if (isset($_GET['page']) && $_GET['page'] == $i) {
                         echo $i + 1;
@@ -62,8 +65,7 @@ $search = $questions->search_question();
                         echo "<a href='?search=" . $_GET['search'] . "&page=" . $i . "'>" . ($i + 1) . "</a>";
                     }
                 }
-            }
-            ?>
+            } ?>
         </div>
     </div>
 </body>
