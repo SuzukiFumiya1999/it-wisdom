@@ -943,3 +943,15 @@ header {
     width: 90%;
     margin: 0 auto;
 }
+
+/* serch.php */
+.not-question {
+    height: 60vh;
+}
+
+
+.not-question h1 {
+    text-align: center;
+    color: grey;
+    line-height: 60vh;
+}
