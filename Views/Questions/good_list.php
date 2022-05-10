@@ -51,7 +51,7 @@ function e($s)
         <?php
         if ($count_good_list['pages'] === 0) { ?>
             <div class="not-question">
-                <h1>投稿は見つかりませんでした。</h1>
+                <h1>いいねした投稿は見つかりませんでした。</h1>
             </div>
         <?php } else {
             for ($i = 0; $i <= $count_good_list['pages']; $i++) {
