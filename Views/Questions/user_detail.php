@@ -32,10 +32,10 @@ function e($s)
         <a href="index.php" class="user_detail-logo"><img src="../images/logo.png"></a>
         <div class="user_detail-right_tab">
             <a href="./good_list.php?id=<?= $_GET['id'] ?>">いいね</a>
-            <?php if ($_GET['id'] === $_SESSION['id']) { ?>
+            <?php if ($_GET['id'] == $_SESSION['id']) : ?>
                 <a href="user_edit.php?id=<?= $_GET['id'] ?>">プロフィール編集</a>
-            <?php } ?>
-            <?php if ($_GET['id'] === $_SESSION['id']) { ?>
+            <?php endif; ?>
+            <?php if ($_GET['id'] == $_SESSION['id']) { ?>
                 <a href="./Login/login.php" id="logout">ログアウト</a>
             <?php } ?>
         </div>
