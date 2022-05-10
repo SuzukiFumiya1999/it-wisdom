@@ -272,6 +272,10 @@ header {
     padding: 100px 0 50px 0;
 }
 
+.new-post_main #preview {
+    width: 100%;
+}
+
 .newPost dl {
     width: 70%;
     font-size: 25px;
