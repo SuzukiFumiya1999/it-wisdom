@@ -133,7 +133,7 @@ class Questions extends Db
 
     public function count_good_question(): Int
     {
-        $sql = 'SELECT count(*) as count FROM ' . $this->table . ' WHERE questions.user_id = ' . $_GET['id'] . ' AND questions.id = goods.question_id';
+        $sql = 'SELECT count(*) as count FROM goods LEFT JOIN questions ON questions.id = goods.question_id WHERE goods.user_id = ' . $_GET['id'] . ' AND goods.question_id = questions.id';
         $sth = $this->dbh->prepare($sql);
         $sth->execute();
         $count = $sth->fetchColumn();
