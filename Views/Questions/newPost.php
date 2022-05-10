@@ -50,7 +50,7 @@ if (!isset($_SESSION['id'])) {
                 $file = $_FILES['image'];
                 $file_name = basename($file['name']);
                 $tmp_name = $file['tmp_name'];
-                $dir = 'C:\xampp\htdocs\7-2\public\question_images/';
+                $dir = 'C:\xampp\htdocs\itw\public\question_images/';
                 $save_filename = $dir . date('YmdHis') . $file_name;
 
                 if (is_uploaded_file($tmp_name)) {
