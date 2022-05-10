@@ -49,11 +49,17 @@ function e($s)
 
     <div class="paging">
         <?php
-        for ($i = 0; $i <= $count_good_list['pages']; $i++) {
-            if (isset($_GET['page']) && $_GET['page'] == $i) {
-                echo $i + 1;
-            } else {
-                echo "<a href='?id=" . $_GET['id'] . "&page=" . $i . "'>" . ($i + 1) . "</a>";
+        if ($count_good_list['pages'] === 0) { ?>
+            <div class="not-question">
+                <h1>投稿は見つかりませんでした。</h1>
+            </div>
+        <?php } else {
+            for ($i = 0; $i <= $count_good_list['pages']; $i++) {
+                if (isset($_GET['page']) && $_GET['page'] == $i) {
+                    echo $i + 1;
+                } else {
+                    echo "<a href='?id=" . $_GET['id'] . "&page=" . $i . "'>" . ($i + 1) . "</a>";
+                }
             }
         }
         ?>
