@@ -636,6 +636,7 @@ header {
 .edit-post_image img {
     display: block;
     min-width: 50%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
